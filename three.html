@@ -1,0 +1,36 @@
+<!--
+    how to create element by dom process
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kunal dom</title>
+    <style>
+        body{
+            color: whitesmoke;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const div=document.createElement('div')
+        console.log(div)
+        div.className="main"
+        div.id="myid"
+        div.style.backgroundColor="yellow"
+        div.style.color="white"
+        div.style.fontSize="40px"
+        div.style.padding="20px"
+        div.innerText="THIS IS THE CALL FROM MUKAMBO"
+        
+
+
+        document.body.appendChild(div)
+    </script>
+</body>
+</html>
