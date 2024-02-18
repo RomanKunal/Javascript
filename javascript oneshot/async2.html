@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>I am a batman </h1>
+    <button class="start">Start</button>
+    <button class="end">End</button>
+    <script>
+        const sayname=()=>{
+            console.log("I guess it is not me");
+        }
+        const set=setInterval(sayname,2000)
+        const a=document.querySelector('.start').addEventListener('click',()=>{
+            console.log(set,Date.now());
+        })
+        const b=document.querySelector('.end').addEventListener('click',()=>{
+            const clear=clearTimeout(set)
+            console.log("stopped");
+        })
+    </script>
+</body>
+</html>

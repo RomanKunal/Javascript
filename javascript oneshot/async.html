@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>This is the design by someone</h1>
+    <button class="stop">Click</button>
+    <script>
+        // const name=()=>{
+        //     console.log("kunal my name");
+        // }
+        // setTimeout(name,5000);
+
+        const change=function(){
+            document.querySelector('h1').innerHTML="I am a batsman";
+
+        }
+        setTimeout(change,5000)
+        //setInterval(change,2000) 
+
+        // how to stop timeout
+
+        const changeMe = setTimeout(change, 2000)
+
+        document.querySelector('.stop').addEventListener('click', ()=>{
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+
+    </script>
+</body>
+</html>
